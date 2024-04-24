@@ -1,0 +1,139 @@
+Questions:
+1. What types of variables we have in Java. Define all of them and explain the differences
+       Q1:  What are variables in Java?
+               - Variables are the containers in Java that can store data values inside them.
+       Q2:  What are the 3 types of variables in Java?
+               1. Local Variables
+                    •   Defined within a method, constructor, or block.
+                    •	Their scope is limited to the block in which they are declared.
+                    •	They are created when the block is entered and destroyed when the block exits.
+                    •	Local variables must be initialized before they are used.
+
+               2. Instance Variables (also known as member variables or field)
+                     •	Belong to an instance of a class (object).
+                     •	Each instance of the class has its own copy of instance variables.
+                     •	They are initialized to default values if not explicitly initialized.
+                     •	Instance variables are declared outside any method, constructor, or block but within the class.
+
+               3. Static variables (also known as class variables):
+                  	•	Belong to the class rather than any specific instance (object).
+                  	•	There is only one copy of a static variable shared among all instances of the class.
+                  	•	They are initialized to default values if not explicitly initialized.
+                  	•	Static variables are declared using the static keyword within the class but outside any method, constructor, or block.
+
+               Differences:
+
+              	Scope:
+              	•	Local variables have a limited scope and are accessible only within the block (method, constructor, or block) in which they are declared.
+              	•	Instance variables are accessible to all methods, constructors, and blocks within the class and are specific to each instance (object)
+              	    of the class.
+              	•	Static variables are accessible to all methods, constructors, and blocks within the class and are shared among all instances of the class.
+              	Lifetime:
+              	•	Local variables are created when the block is entered and destroyed when the block exits.
+              	•	Instance variables exist as long as the object (instance of the class) exists and are destroyed when the object is garbage collected.
+              	•	Static variables exist as long as the class is loaded into memory and are destroyed when the class is unloaded from memory.
+              	Initialization:
+              	•	Local variables must be explicitly initialized before they are used, either by assigning a value or through computation within the block.
+              	•	Instance variables are initialized to default values if not explicitly initialized. These default values depend on the data type
+              	    (e.g., 0 for numeric types, false for boolean, null for reference types).
+              	•	Static variables are also initialized to default values if not explicitly initialized, following the same rules as instance variables.
+              	Usage:
+              	•	Local variables are typically used for temporary storage within a method or block, often for computations or storing method parameters.
+              	•	Instance variables store data specific to each object (instance) of the class, representing the object’s state or properties.
+              	•	Static variables store data shared among all instances of the class, representing class-wide information or properties.
+
+              Understanding these differences is crucial for effectively managing and utilizing variables in Java programs, ensuring proper scoping,
+              lifetime management, and data sharing among objects and classes.
+       Q3:  How to declare variables in Java examples?
+               data_type variable_name = value
+               int count = 20;
+
+
+
+
+                2. Constructors:
+
+            Q1: What is the constructor?
+                 - A constructor in Java is a special method that is used to initialize objects.
+                 - The constructor is called when an object of a class is created.
+                 - Its primary purpose is to initialize the newly created object.
+                 - Constructors have the same name as the class and do not have a return type, not even void.
+                 - (Constructor can be declared private. A private constructor is used in restricting object creation.)
+               Types of Constructor:
+                  1. Default Constructor: 	•	A constructor with no parameters.
+                                          	•	Automatically provided by Java if no constructors are explicitly defined in the class.
+                                          	•	Initializes instance variables to their default values (0, null, false).
+                  2. Parameterized Constructor:
+                                            •	A constructor with one or more parameters.
+                                            •	Allows initialization of instance variables with specific values provided as arguments during object creation.
+                  3. Copy Constructor:
+                                        •	Constructs a new object by copying the state of an existing object.
+                                        •	Takes an object of the same class as a parameter and initializes the new object’s state with the state of the parameter object.
+
+               Q2:  Use of a constructor in the class?
+                 - The use of a constructor in a class is to ensure that every object created from that class starts with a valid state.
+                 - It initializes the object’s state and can perform tasks such as setting initial values for instance variables,
+                   allocating resources, or performing any necessary setup.
+
+                Q3: Difference between constructor and a method?
+                 -  Constructors must have the same name as the class within which it is defined it is not necessary for the method in Java.
+                 -  Constructors do not return any type while method(s) have the return type or void if does not return any value.
+                 -  Constructors are called only once at the time of Object creation while method(s) can be called any number of times.
+                 -  Constructor: Used to initialize objects, ensuring they start with a valid state while Method used to perform operations
+                    or calculations on objects, without necessarily initializing them
+                 -  Constructor: Yes, constructors can be overloaded by providing multiple constructors with different parameter lists.
+                    Method: Yes, methods can be overloaded by providing multiple methods with the same name but different parameter lists.
+        Q4: Can we overload a constructor?
+                 - Yes, constructors can be overloaded just like methods, allowing for different ways to initialize objects of a class
+                   based on different parameters or conditions. This enables flexibility in object creation and initialization within Java classes.
+
+3. What is the usage of super and this? Super vs this? Super() vs super.? this() vs this.
+
+        Q1: 1. **super:**
+               - Used to refer to the immediate parent class object.
+               - It can be used to call methods, access fields, or invoke constructors of the superclass.
+               - It is often used to access overridden methods or constructors from the superclass.
+
+            2. **this:**
+               - Used to refer to the current class object.
+               - It can be used to access instance variables, invoke constructors, or call methods within the same class.
+               - It is often used to disambiguate between instance variables and parameters with the same name,
+                 or to call overloaded constructors within the same class.
+
+        Q2: Super vs this:
+
+           - **Usage:**
+             - `super` is used to access members of the superclass or to invoke superclass constructors.
+             - `this` is used to refer to members of the current class or to call constructors within the same class.
+
+           - **Scope:**
+             - `super` is used within a subclass to access members of the superclass.
+             - `this` is used within a class to refer to its own members.
+
+           - **Invocation:**
+             - `super` is used without parentheses when accessing members or fields of the superclass, and with
+                parentheses when invoking superclass constructors.
+             - `this` is used without parentheses when accessing members or fields of the current class, and with
+                parentheses when invoking constructors within the same class.
+       Q3: Super() vs super.
+
+               "super.":                                                    "super()"
+            - The super keyword in Java is a reference variable            -  The super() in Java is a reference variable
+              that is used to refer parent class objects.                     that is used to refer parent class constructors.
+            - super can be used to call parent class’ variables            -  super() can be used to call parent class’ constructors only.
+              and methods.
+
+
+
+
+
+4. What is Inheritance? Benefits? Types? Explain each type
+5. What is Overloading? How can it be achieved? What can we overload and what we cannot?
+6. What is Overriding? How can it be achieved? What can we override and what we cannot?
+7. What is Polymorphism? Types of Polymorphism? Differences between Overloading & Overriding?
+8. What is the final keyword,usage and purpose?
+9. What is Abstraction? How can we achieve an Abstraction in Java? What is Interface? What is Abstract Class? Interface vs Abstract Class?
+PART 3: Attend Group Interview
+● According to the above theoretical and coding questions you will be having a group interview.
+● In this interview you all join with your cameras on and the instructor will be asking any of these questions randomly from each person.
+● No reading answers and you should be able to explain code and the logic of the code to the above assignments

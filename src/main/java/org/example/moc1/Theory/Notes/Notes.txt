@@ -1,0 +1,83 @@
+Questions:
+1. What types of variables we have in Java. Define all of them and explain the differences
+       Answer:
+            1. Variables are the data containers that save the data values during Java program execution.
+            2. Every Variable in Java is assigned a data type that designates the type and quantity of value it can hold.
+            3. A variable is a memory location name for the data.
+         Short:  Java variable is a name given to a memory location. It is the basic unit of storage in a program.
+            -   The value stored in a variable can be changed during program execution.
+            -   Variables in Java are only a name given to a memory location.
+            -   All the operations done on the variable affect that memory location.
+            -   In Java, all variables must be declared before use.
+         How to Declare Variables in Java?
+            -   datatype: Type of data that can be stored in this variable.
+            -   data_name: Name was given to the variable.
+
+            In this way, a name can only be given to a memory location. It can be assigned values in two ways:
+
+            1.  Variable Initialization
+            2.  Assigning value by taking input
+
+         How to Initialize Variables in Java?
+            It can be perceived with the help of 3 components that are as follows:
+
+            1.  datatype: Type of data that can be stored in this variable.
+            2.  variable_name: Name given to the variable.
+            3.  value: It is the initial value stored in the variable.
+
+         Types of Variables:
+            1.  Local Variables:
+                       - A variable defined within a block or method or constructor is called a local variable.
+                       - These variables are created when the block is entered, or the function is called and destroyed
+                         after exiting from the block or when the call returns from the function.
+                       - The scope of these variables exists only within the block in which the variables are declared,
+                         i.e., we can access these variables only within that block.
+                       - Initialization of the local variable is mandatory before using it in the defined scope.
+                       Time Complexity: O(1)
+                       Auxiliary Space: O(1)
+
+            2.  Instance Variables:
+                        -  Instance variables are non-static variables and are declared in a class outside of any method,
+                           constructor, or block.
+                        -  As instance variables are declared in a class, these variables are created when an object of
+                           the class is created and destroyed when the object is destroyed.
+                        -  Unlike local variables, we may use access specifiers for instance variables.
+                           If we do not specify any access specifier, then the default access specifier will be used.
+                        -  Initialization of an instance variable is not mandatory. Its default value is dependent on the data type of variable.
+                           For String it is null, for float it is 0.0f, for int it is 0, for Wrapper classes like Integer it is null, etc.
+                        -  Instance variables can be accessed only by creating objects.
+                        -  We initialize instance variables using constructors while creating an object.
+                           We can also use instance blocks to initialize the instance variables.
+
+
+            3.  Static Variables:
+                        -  Static variables are also known as class variables.
+                        -  These variables are declared similarly to instance variables.
+                           The difference is that static variables are declared using the static keyword within a class outside of any method,
+                           constructor, or block.
+                        -  Unlike instance variables, we can only have one copy of a static variable per class, irrespective of how many objects we create.
+                        -  Static variables are created at the start of program execution and destroyed automatically when execution ends.
+                        -  Initialization of a static variable is not mandatory. Its default value is dependent on the data type of variable.
+                        For String it is null, for float it is 0.0f, for int it is 0, for Wrapper classes like Integer it is null, etc.
+                        -  If we access a static variable like an instance variable (through an object), the compiler will show a warning message,
+                           which won’t halt the program. The compiler will replace the object name with the class name automatically.
+                        -  If we access a static variable without the class name, the compiler will automatically append the class name.
+                           But for accessing the static variable of a different class, we must mention the class name as 2 different classes
+                           might have a static variable with the same name.
+                        -  Static variables cannot be declared locally inside an instance method.
+                        -  Static blocks can be used to initialize static variables.
+
+
+
+2. What is the constructor? Use of a constructor in the class? Difference between constructor and a method? Can we overload a constructor?
+3. What is the usage of super and this? Super vs this? Super() vs super.? this() vs this.
+4. What is Inheritance? Benefits? Types? Explain each type
+5. What is Overloading? How can it be achieved? What can we overload and what we cannot?
+6. What is Overriding? How can it be achieved? What can we override and what we cannot?
+7. What is Polymorphism? Types of Polymorphism? Differences between Overloading & Overriding?
+8. What is the final keyword,usage and purpose?
+9. What is Abstraction? How can we achieve an Abstraction in Java? What is Interface? What is Abstract Class? Interface vs Abstract Class?
+PART 3: Attend Group Interview
+● According to the above theoretical and coding questions you will be having a group interview.
+● In this interview you all join with your cameras on and the instructor will be asking any of these questions randomly from each person.
+● No reading answers and you should be able to explain code and the logic of the code to the above assignments
